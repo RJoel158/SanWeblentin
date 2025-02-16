@@ -1,0 +1,105 @@
+body {
+    background-color: #fce4ec;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    flex-direction: column;
+    text-align: center;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 36px;
+    color: #d81b60;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in;
+}
+
+.heart-container {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.heart {
+    position: absolute;
+    font-size: 30px;
+    animation: floatHearts 5s infinite;
+}
+
+.message-button {
+    background-color: #d81b60;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.message-button:hover {
+    background-color: #f06292;
+}
+
+.message {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.message p {
+    font-size: 20px;
+    color: #d81b60;
+}
+
+button {
+    margin-top: 10px;
+    background-color: #f06292;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e91e63;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes floatHearts {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-500px) rotate(360deg);
+        opacity: 0;
+    }
+}
